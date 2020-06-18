@@ -2,10 +2,13 @@ doctype html
 html
   head
     title
-      | AppName
+      | Taskleaf
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    = yield
+    .app-title.navbar.navbar-expand-md.navbar-light.bg-light
+      .navbar-brand Taskleaf
+    .container
+      = yield
